@@ -36,6 +36,7 @@ export default class titlescene extends Phaser.Scene {
 	}
 	
 	HomeSettings(){
+		Syst=0;
 		this.scene.switch('cog');
 		
 	}
