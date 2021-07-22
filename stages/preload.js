@@ -2,6 +2,7 @@
 var H2;
 var H1;
 
+var frameNames;
 const windowWidth = window.innerWidth;
 const widnowHeight = window.innerHeight;
 var pause;

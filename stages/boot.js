@@ -30,8 +30,7 @@ export default class boot extends Phaser.Scene
         this.load.image('cog', 'assets/nonsprites/settings.png');
         this.load.image('titleback', 'assets/nonsprites/titleback.png');
 
-        this.load.spritesheet('Player', 'assets/nonsprites/player/Knight.png', { frameWidth: 32, frameHeight: 48 });
-        this.load.multiatlas('player', 'assets/nonsprites/player/Knight.json', "assets");
+        this.load.multiatlas('player', 'assets/nonsprites/player/knight.json', 'assets/nonsprites/player/');
 
     }
 
