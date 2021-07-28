@@ -33,23 +33,6 @@ export default class cog extends Phaser.Scene {
 	}
 
 	BackSyst(){
-		if (Syst = 0) {
-			this.scene.start('titlescene');
-		} 
-		else if (Syst = 1) {
-			this.scene.start('s1');
-		}
-		 else if (Syst = 2) {
-			this.scene.start('s2');
-		}
-		 else if (Syst = 3) {
-			this.scene.start('s3');
-		}
-		 else if (Syst = 4) {
-			this.scene.start('s4');
-		}
-		 else if (Syst = 5) {
-			this.scene.start('boss');
-		}
+		this.scene.switch(map[Syst]);
 	}
 }

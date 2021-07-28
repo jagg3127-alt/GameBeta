@@ -9,7 +9,8 @@ export default class s1 extends Phaser.Scene {
 	}
 
 	create() {
-		
+		this.background = this.add.image(windowWidth / 2, widnowHeight / 2, 'bg');
+		this.background.setDisplaySize(windowWidth, widnowHeight);
 	//-settings--------------------------------------------------
 		cogG = this.add.image(windowWidth / 18, widnowHeight / 9, 'cog');
 		cogG.setDisplaySize(windowWidth / 7 , widnowHeight / 7);
@@ -22,12 +23,10 @@ export default class s1 extends Phaser.Scene {
 
 
 	//-----------------------------------------------------------
-		var pause = false;
 		const cursors = this.input.keyboard.createCursorKeys();
 
 	//-----scene-------------------------------------------------
-	this.background = this.add.image(windowWidth / 2, widnowHeight / 2, 'bg');
-	this.background.setDisplaySize(windowWidth, widnowHeight);
+	
 
 		
 		
@@ -65,10 +64,27 @@ export default class s1 extends Phaser.Scene {
         slima.setVelocityX(-200);
         slima.allowGravity = false;
 
-	 frameNames = this.anims.generateFrameNames('player', {
-  start: 1, end: 8, zeroPad: 4,
-  prefix: 'assets/nonsprites/player/player', suffix: '.png'
-});
+
+		this.anims.create({
+			key: 'left',
+			frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }),
+			frameRate: 10,
+			repeat: -1
+		});
+		
+		this.anims.create({
+			key: 'turn',
+			frames: [ { key: 'player', frame: 4 } ],
+			frameRate: 20
+		});
+		
+		this.anims.create({
+			key: 'right',
+			frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+			frameRate: 10,
+			repeat: -1
+		});
+		
 		
 	}
 	update(){
@@ -80,11 +96,11 @@ export default class s1 extends Phaser.Scene {
 		this.physics.add.collider(slima, player, H1);
 
 
-		H1 =  function(){division();}
+		H1 =  function(){}
 		H2 =  function(){this.scene.switch('s2');}
 		cursors = this.input.keyboard.createCursorKeys();
 
-	/*	if (cursors.left.isDown)
+		if (cursors.left.isDown)
 		{
 			player.setVelocityX(-440);
 	
@@ -111,11 +127,11 @@ export default class s1 extends Phaser.Scene {
 
 			}, 400);
 
-		}*/
+		}
 	}
 	HomeSettings(){
-		this.scene.switch('cog');
-		
+		Syst=1;
+		this.scene.start('cog');
 	}
 	Mainmenu(){
 

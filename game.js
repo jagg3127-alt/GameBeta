@@ -45,14 +45,15 @@ import s2 from './stages/s2.js'
 import s3 from './stages/s3.js'
 import s4 from './stages/s4.js'
 import boss from './stages/boss.js'
-
+import division from './stages/division-screen.js'
 
 import cog from './stages/settings/settings.js'
 
 
 // load scenes
 game.scene.add("boot", boot);
-game.scene.add('titlescene', titlescene);
+game.scene.add("titlescene", titlescene);
+game.scene.add("division", division);
 
 game.scene.add("s1", s1);
 game.scene.add("s2", s2);

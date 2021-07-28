@@ -2,6 +2,7 @@
 var H2;
 var H1;
 
+const map = ['titlescene', 's1', 's2', 's3', 's4', 'boss']
 var frameNames;
 const windowWidth = window.innerWidth;
 const widnowHeight = window.innerHeight;
@@ -23,22 +24,80 @@ var npc;
 var slima;
 var slims;
 var platform;
-
+var A = true;
 var currentLevel;
-
 var problemTop;
 var problemBottom;
 var opSym;
 
 var SoundSyst;
-var Syst = false;
-var /*comming soon*/ COMUNITY;
+let Syst = false;
+let /*comming soon*/ COMUNITY = null;
 var backS;
+var white;
+var box;
 
-/*let topNumber = 0;
-let bottomNumber = 0;
+
+var D = document.getElementById("EnteredX"); 
+
+var answer = divend / divisor;
+
+var divend;
+var divisor;
+
+var a;
+var max;
+var min;
 
 function generateTop(max, min, a){
+  
+  divend = a * Math.floor(Math.random() * (max - min) + min);
+  return divend;
+  
+};
+
+function generateBottom(max, min){
+  
+  divisor = Math.floor(Math.random() * (max - min) + min);
+  return divisor;
+  
+};
+
+var hard = function answerh(){
+
+  generateTop(M, m, generateBottom(M, m))
+
+}
+
+var M;
+var m;
+if (life = 1) {
+  
+} else if(life = 2) {
+  
+} else if(life = 3){
+
+} else{
+  M=50;
+  m=2
+ console.log.error('BAD LIVES/TEST')
+}
+
+
+var easy = function answere(){
+  generateTop(M, m, generateBottom(M, m))
+
+}
+
+
+
+
+
+
+
+
+
+/*function generateTop(max, min, a){
   
   topNumber = a * Math.floor(Math.random() * (max - min) + min);
   return topNumber + " is divisible by " + a + " ( *" + topNumber/a + ")";

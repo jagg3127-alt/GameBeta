@@ -20,6 +20,8 @@ export default class boot extends Phaser.Scene
         this.load.image('slime-a', 'assets/slime-a.png');
         this.load.image('slime-s', 'assets/slime-s.png');
 
+        this.load.image('white', 'assets/nonsprites/white.jpg')
+
         this.load.image('back', 'assets/nonsprites/back.png');
         this.load.image('bg', 'assets/nonsprites/bg.png');
         this.load.image('cogbg', 'assets/nonsprites/cogbg.png');
@@ -30,7 +32,7 @@ export default class boot extends Phaser.Scene
         this.load.image('cog', 'assets/nonsprites/settings.png');
         this.load.image('titleback', 'assets/nonsprites/titleback.png');
 
-        this.load.multiatlas('player', 'assets/nonsprites/player/knight.json', 'assets/nonsprites/player/');
+        this.load.multiatlas('player', 'assets/nonsprites/player/Knight.json', 'assets/nonsprites/player/');
 
     }
 
