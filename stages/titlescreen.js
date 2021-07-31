@@ -13,10 +13,10 @@ export default class titlescene extends Phaser.Scene {
 		this.titleback = this.add.image(windowWidth / 2, widnowHeight / 2, 'titleback');
 		this.titleback.setDisplaySize(windowWidth, widnowHeight);
 
-		COMUNITY = this.add.image(windowWidth / 1.1, widnowHeight / 9, 'back');
-		COMUNITY.setDisplaySize(windowWidth / 6.5 , widnowHeight / 6.5);
-		COMUNITY.setInteractive({ useHandCursor: true });
-		COMUNITY.on('pointerdown', () => this.BackSystX());
+		//COMUNITY = this.add.image(windowWidth / 1.1, widnowHeight / 9, 'back');
+		//COMUNITY.setDisplaySize(windowWidth / 6.5 , widnowHeight / 6.5);
+		//COMUNITY.setInteractive({ useHandCursor: true });
+		//COMUNITY.on('pointerdown', () => this.BackSystX());
 		
 		this.logo = this.add.image(windowWidth / 1.8, widnowHeight / 3.5, 'logo');
 		this.logo.setDisplaySize(windowWidth / 1.5 , widnowHeight / 1.5);
@@ -55,6 +55,7 @@ export default class titlescene extends Phaser.Scene {
 	}
 	
 	playb() {
+		Syst = 1;
 		this.scene.switch('s1');
 	}
 

@@ -31,7 +31,8 @@ export default class s1 extends Phaser.Scene {
 		
 		
 		slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
- 
+
+		
 
 
 		player = this.physics.add.sprite(windowWidth / 9.9777777, widnowHeight / 3.5, 'player', 'assets/nonsprites/player/knight.png');
@@ -67,20 +68,20 @@ export default class s1 extends Phaser.Scene {
 
 		this.anims.create({
 			key: 'left',
-			frames: this.anims.generateFrameNumbers('player', { start: 0, end: 3 }),
+			frames: this.anims.generateFrameNumbers('player', { start: '0l1.png', end: '0l2.png' }),
 			frameRate: 10,
 			repeat: -1
 		});
 		
 		this.anims.create({
 			key: 'turn',
-			frames: [ { key: 'player', frame: 4 } ],
+			frames: [ { key: 'player', frame: '0m4.png' } ],
 			frameRate: 20
 		});
 		
 		this.anims.create({
 			key: 'right',
-			frames: this.anims.generateFrameNumbers('dude', { start: 5, end: 8 }),
+			frames: this.anims.generateFrameNumbers('player', { start: '0r5.png', end: '0r6.png' }),
 			frameRate: 10,
 			repeat: -1
 		});
@@ -88,6 +89,18 @@ export default class s1 extends Phaser.Scene {
 		
 	}
 	update(){
+		timedEvent = this.time.addEvent({ delay: 0, callback: atack, callbackScope: this, loop: true });
+
+		atack=function(){
+
+			setTimeout(() => {
+				slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
+			}, atack); 
+		}
+		slima.setCollideWorldBounds(false);
+        slima.setVelocityX(-200);
+        slima.allowGravity = false;
+
 		this.physics.add.collider(player, ground);
 		this.physics.add.collider(slims, ground);
 		this.physics.add.collider(slima, ground);
@@ -131,7 +144,7 @@ export default class s1 extends Phaser.Scene {
 	}
 	HomeSettings(){
 		Syst=1;
-		this.scene.start('cog');
+		this.scene.switch('cog');
 	}
 	Mainmenu(){
 
@@ -140,5 +153,6 @@ export default class s1 extends Phaser.Scene {
 	BackSyst1(){
 
 	}
+	
 	
 }

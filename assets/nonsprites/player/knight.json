@@ -1,7 +1,7 @@
 {
 	"textures": [
 		{
-			"image": "Knight.png",
+			"image": "knight.png",
 			"format": "RGBA8888",
 			"size": {
 				"w": 344,
@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "player0001.png",
+					"filename": "0l1.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "player0002.png",
+					"filename": "0l2.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -52,7 +52,7 @@
 					}
 				},
 				{
-					"filename": "player0003.png",
+					"filename": "0l3.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -73,7 +73,7 @@
 					}
 				},
 				{
-					"filename": "player0004.png",
+					"filename": "0m4.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -94,7 +94,7 @@
 					}
 				},
 				{
-					"filename": "player0005.png",
+					"filename": "0r5.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -115,7 +115,7 @@
 					}
 				},
 				{
-					"filename": "player0006.png",
+					"filename": "0r6.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -136,7 +136,7 @@
 					}
 				},
 				{
-					"filename": "player0007.png",
+					"filename": "0r7.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -157,7 +157,7 @@
 					}
 				},
 				{
-					"filename": "player0008.png",
+					"filename": "0x8.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {

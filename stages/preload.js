@@ -1,7 +1,7 @@
 //--Define-Variables-----------------------------
 var H2;
 var H1;
-
+var timedEvent;
 const map = ['titlescene', 's1', 's2', 's3', 's4', 'boss']
 var frameNames;
 const windowWidth = window.innerWidth;
@@ -89,8 +89,22 @@ var easy = function answere(){
 
 }
 
+let attack = 0;
+var atack;
 
+if(Syst = 1){
+attack = 30 * 1000;
+} else if(Syst = 2){
 
+} else if(Syst = 3){
+
+} else if(Syst = 4){
+
+} else if(Syst = 5){
+
+} else {
+
+}
 
 
 
