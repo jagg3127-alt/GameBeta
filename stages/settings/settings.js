@@ -27,9 +27,14 @@ export default class cog extends Phaser.Scene {
 		backS.setDisplaySize(windowWidth / 6.5 , widnowHeight / 6.5);
 		backS.setInteractive({ useHandCursor: true });
 		backS.on('pointerdown', () => this.BackSyst());
+
+		Titleb = this.add.text(windowWidth / 10.5, widnowHeight / 1.25, 'Home');
+		Titleb.setDisplaySize(windowWidth / 5.5 , widnowHeight / 5.5);
+		Titleb.setInteractive({ useHandCursor: true });
+		Titleb.on('pointerdown', () => this.HomeSyst());
     }
-	SoundSyst(){
-		
+	HomeSyst(){
+		this.scene.switch(map[0]);
 	}
 
 	BackSyst(){

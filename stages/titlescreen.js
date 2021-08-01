@@ -57,6 +57,7 @@ export default class titlescene extends Phaser.Scene {
 	playb() {
 		Syst = 1;
 		this.scene.switch('s1');
+
 	}
 
 	help() {

@@ -7,8 +7,18 @@ export default class s1 extends Phaser.Scene {
 	preload() {
 
 	}
-
+	atack(){
+		console.log('attack');
+		slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
+		
+	}
 	create() {
+		this.timedEvent = this.time.addEvent({
+			callback: atack,
+			callbackScope: this,
+			delay: time,
+			loop: true
+		});
 		this.background = this.add.image(windowWidth / 2, widnowHeight / 2, 'bg');
 		this.background.setDisplaySize(windowWidth, widnowHeight);
 	//-settings--------------------------------------------------
@@ -29,9 +39,11 @@ export default class s1 extends Phaser.Scene {
 	
 
 		
-		
-		slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
+	slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
 
+		
+	
+		
 		
 
 
@@ -46,25 +58,7 @@ export default class s1 extends Phaser.Scene {
 			slima.setDisplaySize(13, 15)
 
 
-		player.setCollideWorldBounds(true);
-		slims.setCollideWorldBounds(true);
-		ground.setCollideWorldBounds(true);
-
-		player.setImmovable(false);
-		slims.setImmovable(true);
-		slima.setImmovable(true);
-		ground.setImmovable(false)
-
-
-		slims.setGravityY(300);
-		player.setGravityY(1000);
-
-			
-
-        slima.setCollideWorldBounds(false);
-        slima.setVelocityX(-200);
-        slima.allowGravity = false;
-
+		
 
 		this.anims.create({
 			key: 'left',
@@ -89,14 +83,27 @@ export default class s1 extends Phaser.Scene {
 		
 	}
 	update(){
-		timedEvent = this.time.addEvent({ delay: 0, callback: atack, callbackScope: this, loop: true });
+		player.setCollideWorldBounds(true);
+		slims.setCollideWorldBounds(true);
+		ground.setCollideWorldBounds(true);
 
-		atack=function(){
+		player.setImmovable(false);
+		slims.setImmovable(true);
+		slima.setImmovable(true);
+		ground.setImmovable(false)
 
-			setTimeout(() => {
-				slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
-			}, atack); 
-		}
+
+		slims.setGravityY(300);
+		player.setGravityY(1000);
+
+			
+
+        slima.setCollideWorldBounds(false);
+        slima.setVelocityX(-200);
+        slima.allowGravity = false;
+
+		
+		
 		slima.setCollideWorldBounds(false);
         slima.setVelocityX(-200);
         slima.allowGravity = false;
@@ -110,7 +117,7 @@ export default class s1 extends Phaser.Scene {
 
 
 		H1 =  function(){}
-		H2 =  function(){this.scene.switch('s2');}
+		H2 =  function(){}
 		cursors = this.input.keyboard.createCursorKeys();
 
 		if (cursors.left.isDown)

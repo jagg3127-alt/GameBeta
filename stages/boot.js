@@ -38,7 +38,6 @@ export default class boot extends Phaser.Scene
 
     create ()
     {
-        
         this.scene.start('titlescene');
     }
 }

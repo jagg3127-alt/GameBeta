@@ -8,7 +8,7 @@ const windowWidth = window.innerWidth;
 const widnowHeight = window.innerHeight;
 var pause;
 var cursors;
-var i;
+var i = 1;
 var background;
 var logo;
 var playb;
@@ -29,7 +29,7 @@ var currentLevel;
 var problemTop;
 var problemBottom;
 var opSym;
-
+var Titleb;
 var SoundSyst;
 let Syst = false;
 let /*comming soon*/ COMUNITY = null;
@@ -44,7 +44,9 @@ var answer = divend / divisor;
 
 var divend;
 var divisor;
-
+var myLoop;
+var myloop;
+var timedEvent;
 var a;
 var max;
 var min;
@@ -88,12 +90,13 @@ var easy = function answere(){
   generateTop(M, m, generateBottom(M, m))
 
 }
-
-let attack = 0;
+let xx = 0;
+var time;
+var delay = time*1000;
 var atack;
 
 if(Syst = 1){
-attack = 30 * 1000;
+time = 1;
 } else if(Syst = 2){
 
 } else if(Syst = 3){
