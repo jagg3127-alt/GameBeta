@@ -21,8 +21,22 @@ var helf;
 var back;
 var PLACEHOLDER;
 var npc;
+
 var slima;
 var slims;
+
+var robat;
+var robst;
+
+var ghosta;
+var ghosts;
+
+var dragona;
+var dragons;
+
+var catta;
+var catts;
+
 var platform;
 var A = true;
 var currentLevel;
@@ -96,7 +110,7 @@ var delay = time*1000;
 var atack;
 
 if(Syst = 1){
-time = 1;
+time = 30;
 } else if(Syst = 2){
 
 } else if(Syst = 3){
@@ -109,6 +123,11 @@ time = 1;
 
 }
 
+function atack(){
+  console.log('attack');
+  slima;
+  
+}
 
 
 

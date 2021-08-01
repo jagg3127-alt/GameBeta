@@ -7,18 +7,20 @@ export default class s1 extends Phaser.Scene {
 	preload() {
 
 	}
-	atack(){
-		console.log('attack');
-		slima = this.physics.add.sprite(windowWidth / 1.5, widnowHeight / 1.5, 'slime-a')
-		
-	}
+
 	create() {
-		this.timedEvent = this.time.addEvent({
-			callback: atack,
+		timedEvent = this.time.addEvent({
+			callback: atack(),
 			callbackScope: this,
-			delay: time,
+			delay: 1,
 			loop: true
 		});
+
+		timedEvent.remove(false);
+		H1 = function(){
+			this.scene.switch('s2');
+		}
+
 		this.background = this.add.image(windowWidth / 2, widnowHeight / 2, 'bg');
 		this.background.setDisplaySize(windowWidth, widnowHeight);
 	//-settings--------------------------------------------------
@@ -62,9 +64,9 @@ export default class s1 extends Phaser.Scene {
 
 		this.anims.create({
 			key: 'left',
-			frames: this.anims.generateFrameNumbers('player', { start: '0l1.png', end: '0l2.png' }),
+			frames: this.anims.generateFrameNumbers('player', { start: '0l1.png', end: '0l.png' }),
 			frameRate: 10,
-			repeat: -1
+			repeat: 1
 		});
 		
 		this.anims.create({
@@ -77,12 +79,14 @@ export default class s1 extends Phaser.Scene {
 			key: 'right',
 			frames: this.anims.generateFrameNumbers('player', { start: '0r5.png', end: '0r6.png' }),
 			frameRate: 10,
-			repeat: -1
+			repeat: 1
 		});
 		
 		
 	}
 	update(){
+		
+		
 		player.setCollideWorldBounds(true);
 		slims.setCollideWorldBounds(true);
 		ground.setCollideWorldBounds(true);
@@ -112,12 +116,11 @@ export default class s1 extends Phaser.Scene {
 		this.physics.add.collider(slims, ground);
 		this.physics.add.collider(slima, ground);
 
-		this.physics.add.collider(slims, player, H2);
-		this.physics.add.collider(slima, player, H1);
+		this.physics.add.overlap(player, slims, H1, null, this);
+		this.physics.add.collider(slima, player, H2, null, this);
 
 
-		H1 =  function(){}
-		H2 =  function(){}
+		
 		cursors = this.input.keyboard.createCursorKeys();
 
 		if (cursors.left.isDown)
@@ -149,6 +152,9 @@ export default class s1 extends Phaser.Scene {
 
 		}
 	}
+	
+
+
 	HomeSettings(){
 		Syst=1;
 		this.scene.switch('cog');
