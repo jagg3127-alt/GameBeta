@@ -140,6 +140,7 @@ function atack(){
   console.log('attack');
   slima;
   
+  
 }
 
 
