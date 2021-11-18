@@ -13,15 +13,15 @@ export default class s1 extends Phaser.Scene {
 		ground = this.physics.add.sprite(windowWidth / 11, widnowHeight, 'ground');
 		ground.setDisplaySize(windowWidth, widnowHeight / 5.5);
 
-    this.Al = this.add.image(0,0, 'Al');
-    this.Al.setDisplaySize(windowWidth / 7 , widnowHeight / 7);
-    this.Al.setInteractive({ useHandCursor: true });
-    this.Al.on('pointerdown', () => this.LeftMove());
+   // this.Al = this.add.image(0,0, 'Al');
+    //this.Al.setDisplaySize(windowWidth / 7 , widnowHeight / 7);
+   // this.Al.setInteractive({ useHandCursor: true });
+   // this.Al.on('pointerdown', () => this.LeftMove());
     
-    this.Ar = this.add.image(0,1, 'Ar');
-    this.Ar.setDisplaySize(windowWidth / 7 , widnowHeight / 7);
-    this.Ar.setInteractive({ useHandCursor: true });
-    this.Ar.on('pointerdown', () => this.RightMove());
+   // this.Ar = this.add.image(0,1, 'Ar');
+  //  this.Ar.setDisplaySize(windowWidth / 7 , widnowHeight / 7);
+  //  this.Ar.setInteractive({ useHandCursor: true });
+  //  this.Ar.on('pointerdown', () => this.RightMove());
     
 	//-settings--------------------------------------------------
 
