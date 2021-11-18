@@ -9,9 +9,9 @@ export default class boot extends Phaser.Scene
     {
         // load all files necessary for the loading screen
 
-this.load.image('Al', 'assets/Al.png');
+//this.load.image('Al', 'assets/Al.png');
      
-this.load.image('Ar', 'assets/Ar.png');
+//this.load.image('Ar', 'assets/Ar.png');
      this.load.image('logo', 'assets/logo.png');
         this.load.image('cat-a', 'assets/catto-a.png');
         this.load.image('cat-s', 'assets/catto-s.png');
