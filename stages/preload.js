@@ -1,6 +1,6 @@
 //--Define-Variables-----------------------------
-var Ar;
-var Al;
+//var Ar;
+//var Al;
 var cursors;
 var background;
 var sceneBg;
